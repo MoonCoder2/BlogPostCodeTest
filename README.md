@@ -36,9 +36,9 @@ API incompatibility, easily solved by bumping maven-war-plugin to 3.3.2
 
 While at it, I decided to bump the rest of the dated libraries, bumped the Java version from 8 to 17 and the javaee platform to 8.0.1
 
-I like to use https://mvnrepository.com to search for the latest version, but if you don't like the UI then https://repo1.maven.org/maven2/ is nice
+I like to use https://mvnrepository.com to search for the latest version, but if you don't like the UI then https://repo1.maven.org/maven2/ is for you
 
-After that the code ran.
+After that the code I ran.
 ```
 java -jar ../payara-micro-5.2021.10.jar --deploy blog-web/target/blog-web.war
 ```
@@ -123,7 +123,7 @@ The 405 (Method Not Allowed) status code indicates that the method received in t
 ```
 
 In conclusion, I accept the id as input, but in the absence of adhering to legacy I will return
-400 for malformed input. PUT will not return 404 but will create the resource instead of 405.
+400 for malformed input instead of 405. PUT will not return 404 but will create the resource.
 
 
 ## 6. H2 database
