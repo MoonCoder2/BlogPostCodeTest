@@ -1,18 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <parent>
-        <artifactId>codetest</artifactId>
-        <groupId>com.pierceecom.sample</groupId>
-        <version>1.0-SNAPSHOT</version>
-    </parent>
 
     <groupId>com.pierceecom.sample</groupId>
-    <artifactId>blog-web</artifactId>
-    <version>1.0-SNAPSHOT</version>
-    <packaging>war</packaging>
+    <artifactId>api</artifactId>
+    <version>local</version>
+    <packaging>jar</packaging>
 
-    <name>blog-web</name>
+    <name>api</name>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -25,6 +20,8 @@
         <hibernate.entitymanager.version>5.6.3.Final</hibernate.entitymanager.version>
         <querydsl.jpa.version>5.0.0</querydsl.jpa.version>
         <hibernate.validator.version>7.0.2.Final</hibernate.validator.version>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
     </properties>
     
     <dependencies>
@@ -85,27 +82,7 @@
             <version>${hibernate.validator.version}</version>
         </dependency>
 
-        <!-- Common model -->
-        <dependency>
-            <groupId>com.pierceecom.sample</groupId>
-            <artifactId>api</artifactId>
-            <version>local</version>
-        </dependency>
     </dependencies>
 
-    <build>
-        <finalName>blog-web</finalName>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-war-plugin</artifactId>
-                <version>3.3.2</version>
-                <configuration>
-                    <failOnMissingWebXml>false</failOnMissingWebXml>
-                </configuration>
-            </plugin>
-            
-        </plugins>
-    </build>
 
 </project>
